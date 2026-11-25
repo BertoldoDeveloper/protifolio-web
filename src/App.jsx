@@ -6,6 +6,9 @@ import Hero from "./sections/Hero/Hero";
 import Profile from "./sections/Profile/Profile";
 import About from "./sections/About/About";
 import TechStack from "./sections/TechStack/TechStack";
+import Projects from "./sections/Projects/Projects";
+import Education from "./sections/Education/Education";
+import Experience from "./sections/Experience/Experience";
 
 import "./App.css";
 
@@ -24,19 +27,11 @@ function App() {
 
           <TechStack />
 
-          <Card className="projects" id="projetos">
-            <h2>Projetos</h2>
+          <Projects />
 
-            <p>Ideias em construção.</p>
-          </Card>
+          <Education />
 
-          <Card className="education" id="formacao">
-            <h2>Formação</h2>
-          </Card>
-
-          <Card className="experience" id="experiencia">
-            <h2>Experiência</h2>
-          </Card>
+          <Experience />
 
           <Card className="contact" id="contato">
             <h2>Contato</h2>
