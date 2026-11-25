@@ -10,29 +10,26 @@ import Education from "./sections/Education/Education";
 import Experience from "./sections/Experience/Experience";
 import Contact from "./sections/Contact/Contact";
 
+import useTheme from "./hooks/useTheme";
+
 import "./App.css";
 
 function App() {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <>
-      <Header />
+      <Header theme={theme} onToggleTheme={toggleTheme} />
 
       <main className="container">
         <div className="bento-grid">
           <Hero />
-
           <Profile />
-
           <About />
-
           <TechStack />
-
           <Projects />
-
           <Education />
-
           <Experience />
-
           <Contact />
         </div>
       </main>

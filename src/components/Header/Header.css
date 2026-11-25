@@ -157,3 +157,23 @@
     transition: none;
   }
 }
+
+/* Theme toggle e acoes mobile */
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+@media (min-width: 601px) {
+  .header__actions {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .header__actions {
+    margin-left: auto;
+  }
+}

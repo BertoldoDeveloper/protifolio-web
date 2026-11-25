@@ -52,3 +52,25 @@ a {
     scroll-behavior: auto;
   }
 }
+
+/* Tema de transicoes */
+
+body {
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.card {
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .card {
+    transition: none;
+  }
+}

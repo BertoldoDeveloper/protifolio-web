@@ -2,30 +2,26 @@ import { useState, useRef } from "react";
 
 import { ArrowUpRight, Menu, X } from "lucide-react";
 
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
+
 import "./Header.css";
 
-function Header() {
-  // Estado responsável pela abertura do menu
+function Header({ theme, onToggleTheme }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Referência ao botão de navegação mobile
   const menuButtonRef = useRef(null);
 
-  // Alterna entre aberto e fechado
   function toggleMenu() {
     setIsMenuOpen((previousState) => !previousState);
   }
 
-  // Fecha o menu
   function closeMenu() {
     setIsMenuOpen(false);
   }
 
-  // Fecha o menu utilizando Escape
   function handleKeyDown(event) {
     if (event.key === "Escape" && isMenuOpen) {
       closeMenu();
-
       menuButtonRef.current?.focus();
     }
   }
@@ -41,23 +37,27 @@ function Header() {
         LB<span>.</span>
       </a>
 
-      <button
-        ref={menuButtonRef}
-        type="button"
-        className="header__toggle"
-        onClick={toggleMenu}
-        aria-label={
-          isMenuOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"
-        }
-        aria-expanded={isMenuOpen}
-        aria-controls="primary-navigation"
-      >
-        {isMenuOpen ? (
-          <X size={24} aria-hidden="true" />
-        ) : (
-          <Menu size={24} aria-hidden="true" />
-        )}
-      </button>
+      <div className="header__actions">
+        <ThemeToggle theme={theme} onToggle={onToggleTheme} />
+
+        <button
+          ref={menuButtonRef}
+          type="button"
+          className="header__toggle"
+          onClick={toggleMenu}
+          aria-label={
+            isMenuOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"
+          }
+          aria-expanded={isMenuOpen}
+          aria-controls="primary-navigation"
+        >
+          {isMenuOpen ? (
+            <X size={24} aria-hidden="true" />
+          ) : (
+            <Menu size={24} aria-hidden="true" />
+          )}
+        </button>
+      </div>
 
       <nav
         id="primary-navigation"

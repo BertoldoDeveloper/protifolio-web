@@ -9,6 +9,19 @@
       content="Portfólio profissional de Ladislau Bertoldo, estudante de Engenharia de Software e desenvolvedor em início de carreira."
     />
     <meta name="theme-color" content="#EAE8E3" />
+
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("portfolio-theme");
+
+        const theme = savedTheme === "dark" ? "dark" : "light";
+
+        document.documentElement.dataset.theme = theme;
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

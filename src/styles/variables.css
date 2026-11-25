@@ -1,4 +1,12 @@
 :root {
+  /* Tema especifico de cores */
+
+  color-scheme: light;
+
+  --color-on-primary: #ffffff;
+
+  --color-on-preview: #51419d;
+
   /* Cores */
   --color-background: #eae8e3;
   --color-surface: #faf9f6;
@@ -27,7 +35,7 @@
   --text-3xl: 2.5rem;
   --text-display: 4rem;
 
-  /* Espaçamento */
+  /* Espacamento */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 16px;
@@ -53,4 +61,24 @@
   /* Animacao */
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
+}
+
+/* Tema Dark */
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-background: #17171c;
+  --color-surface: #24232b;
+
+  --color-primary: #b4a5f5;
+  --color-primary-dark: #d5caff;
+  --color-accent: #393149;
+
+  --color-text-primary: #f5f3f0;
+  --color-text-secondary: #c3c0cd;
+  --color-border: #45434f;
+
+  --color-on-primary: #17171c;
+  --color-on-preview: #51419d;
 }
