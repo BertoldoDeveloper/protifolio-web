@@ -1,11 +1,11 @@
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Card from "./components/Card/Card";
-import TechTag from "./components/TechTag/TechTag";
-import SectionHeading from "./components/SectionHeading/SectionHeading";
 
 import Hero from "./sections/Hero/Hero";
 import Profile from "./sections/Profile/Profile";
+import About from "./sections/About/About";
+import TechStack from "./sections/TechStack/TechStack";
 
 import "./App.css";
 
@@ -20,28 +20,9 @@ function App() {
 
           <Profile />
 
-          <Card className="about" id="sobre">
-            <h2>Sobre mim</h2>
+          <About />
 
-            <p>Minha trajetória profissional.</p>
-          </Card>
-
-          <Card className="tech-stack">
-            <SectionHeading
-              label="02 / Tech Stack"
-              title="Tecnologias."
-              description="Ferramentas que estudo e utilizo."
-            />
-
-            <div className="component-test">
-              <TechTag name="HTML5" />
-              <TechTag name="CSS3" />
-              <TechTag name="JavaScript" />
-              <TechTag name="React" />
-              <TechTag name="Python" />
-              <TechTag name="Git" />
-            </div>
-          </Card>
+          <TechStack />
 
           <Card className="projects" id="projetos">
             <h2>Projetos</h2>
@@ -49,11 +30,11 @@ function App() {
             <p>Ideias em construção.</p>
           </Card>
 
-          <Card className="education">
+          <Card className="education" id="formacao">
             <h2>Formação</h2>
           </Card>
 
-          <Card className="experience">
+          <Card className="experience" id="experiencia">
             <h2>Experiência</h2>
           </Card>
 

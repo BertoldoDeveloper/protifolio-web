@@ -3,7 +3,7 @@ import { ArrowUpRight, Download } from "lucide-react";
 import Card from "../../components/Card/Card";
 import Button from "../../components/Button/Button";
 
-import { profile } from "../../data/profile";
+import { profile } from "../../Data/profile";
 
 import "./Hero.css";
 

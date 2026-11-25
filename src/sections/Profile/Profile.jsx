@@ -2,7 +2,7 @@ import { UserRound } from "lucide-react";
 
 import Card from "../../components/Card/Card";
 
-import { profile } from "../../data/profile";
+import { profile } from "../../Data/profile";
 
 import "./Profile.css";
 
