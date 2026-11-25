@@ -1,6 +1,5 @@
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Card from "./components/Card/Card";
 
 import Hero from "./sections/Hero/Hero";
 import Profile from "./sections/Profile/Profile";
@@ -9,6 +8,7 @@ import TechStack from "./sections/TechStack/TechStack";
 import Projects from "./sections/Projects/Projects";
 import Education from "./sections/Education/Education";
 import Experience from "./sections/Experience/Experience";
+import Contact from "./sections/Contact/Contact";
 
 import "./App.css";
 
@@ -33,11 +33,7 @@ function App() {
 
           <Experience />
 
-          <Card className="contact" id="contato">
-            <h2>Contato</h2>
-
-            <p>Vamos criar algo juntos?</p>
-          </Card>
+          <Contact />
         </div>
       </main>
 
