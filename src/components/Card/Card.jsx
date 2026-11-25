@@ -1,7 +1,16 @@
 import "./Card.css";
 
-function Card({ children, className = "" }) {
-  return <section className={`card ${className}`}>{children}</section>;
+function Card({
+  children,
+  className = "",
+  as: Component = "section",
+  ...props
+}) {
+  return (
+    <Component className={`card ${className}`.trim()} {...props}>
+      {children}
+    </Component>
+  );
 }
 
 export default Card;
