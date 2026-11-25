@@ -1,0 +1,19 @@
+.experience.card {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-5);
+}
+
+.experience__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: var(--space-3);
+}
+
+.experience__icon {
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
