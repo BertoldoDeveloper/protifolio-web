@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import Card from "../Card/Card";
 import Button from "../Button/Button";
 import TechTag from "../TechTag/TechTag";
+import SafeImage from "../SafeImage/SafeImage";
 
 import "./ProjectCard.css";
 
@@ -35,21 +36,19 @@ function ProjectCard({ project }) {
           "--project-color": color,
         }}
       >
-        {image ? (
-          <img
-            src={image}
-            alt={`Prévia do projeto ${title}`}
-            loading="lazy"
-            width="640"
-            height="360"
-          />
-        ) : (
-          <div className="project-card__placeholder">
-            <Icon size={48} strokeWidth={1.5} aria-hidden="true" />
+        <SafeImage
+          src={image}
+          alt={`Prévia do projeto ${title}`}
+          loading="lazy"
+          objectFit="cover"
+          fallback={
+            <div className="project-card__placeholder">
+              <Icon size={48} strokeWidth={1.5} aria-hidden="true" />
 
-            <span>{title}</span>
-          </div>
-        )}
+              <span>{title}</span>
+            </div>
+          }
+        />
       </div>
 
       <span className={`project-card__status project-card__status--${status}`}>
