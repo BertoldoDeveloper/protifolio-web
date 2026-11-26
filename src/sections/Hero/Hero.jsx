@@ -3,13 +3,18 @@ import { ArrowUpRight, Download } from "lucide-react";
 import Card from "../../components/Card/Card";
 import Button from "../../components/Button/Button";
 
-import { profile } from "../../Data/profile";
+import { profile } from "../../data/profile";
 
 import "./Hero.css";
 
 function Hero() {
   return (
-    <Card className="hero" id="inicio" aria-labelledby="hero-title">
+    <Card
+      className="hero"
+      id="inicio"
+      tabindex={1}
+      aria-labelledby="hero-title"
+    >
       {profile.available && (
         <div className="hero__status">
           <span className="hero__status-dot" aria-hidden="true" />

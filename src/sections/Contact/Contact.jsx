@@ -2,8 +2,10 @@ import { MessageCircle } from "lucide-react";
 
 import Card from "../../components/Card/Card";
 import SocialLink from "../../components/SocialLink/SocialLink";
+import CopyEmail from "../../components/CopyEmail/CopyEmail";
 
 import { socialLinks } from "../../data/socialLinks";
+import { profile } from "../../data/profile";
 
 import "./Contact.css";
 
@@ -46,8 +48,10 @@ function Contact() {
           ))}
         </div>
       ) : (
-        <p className="contact__empty">Canais de contato em atualização.</p>
+        <p className="contact__empty">Canais de contato.</p>
       )}
+
+      <CopyEmail email={profile.email} />
     </Card>
   );
 }

@@ -1,86 +1,25 @@
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: var(--grid-gap);
+/* Sticky Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+
+  background-color: var(--color-background);
+
+  border-bottom: 1px solid var(--color-border);
 }
 
-.hero {
-  grid-column: span 8;
-  min-height: 420px;
-}
+/* Evita que o botão flutuante cubra
+   os controles do rodapé */
 
-.profile {
-  grid-column: span 4;
-  background-color: var(--color-accent);
-}
-
-.about,
-.tech-stack {
-  grid-column: span 6;
-  min-height: 312px;
-}
-
-.projects {
-  grid-column: span 12;
-  min-height: 480px;
-}
-
-.education,
-.experience {
-  grid-column: span 6;
-  min-height: 420px;
-}
-
-.contact {
-  grid-column: span 12;
-  min-height: 192px;
-}
-
-footer.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  min-height: 80px;
-}
-
-/* Responsividade inicial */
-@media (max-width: 1024px) {
-  .bento-grid {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
-    gap: var(--space-3);
-  }
-
-  .hero {
-    grid-column: span 5;
-  }
-
-  .profile {
-    grid-column: span 3;
-  }
-
-  .about,
-  .tech-stack,
-  .education,
-  .experience {
-    grid-column: span 4;
-  }
-
-  .projects,
-  .contact {
-    grid-column: span 8;
-  }
+.footer {
+  padding-right: 72px;
 }
 
 @media (max-width: 600px) {
-  .bento-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .bento-grid > .card {
-    grid-column: 1 / -1;
-    min-height: auto;
-    padding: var(--space-4);
+  .footer {
+    padding-right: 56px;
   }
 }
