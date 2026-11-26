@@ -48,7 +48,10 @@ function Projects() {
     allButtonRef.current?.focus();
   }
 
-  const resultLabel = filteredProjects.length === 1 ? "projeto" : "projetos";
+  const resultLabel =
+    filteredProjects.length === 1
+      ? "projeto encontrado"
+      : "projetos encontrados";
 
   return (
     <Card

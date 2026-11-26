@@ -74,3 +74,44 @@ body {
     transition: none;
   }
 }
+
+/* Anchor navigation */
+
+main[id],
+main [id] {
+  scroll-margin-top: 112px;
+}
+
+@media (max-width: 600px) {
+  main[id],
+  main [id] {
+    scroll-margin-top: 104px;
+  }
+}
+
+/* Acessibilidade skip link */
+
+.skip-link {
+  position: fixed;
+
+  top: var(--space-3);
+  left: var(--space-3);
+
+  z-index: 200;
+
+  padding: 12px 16px;
+
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+
+  border-radius: var(--radius-md);
+
+  font-size: var(--text-sm);
+  font-weight: 600;
+
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}

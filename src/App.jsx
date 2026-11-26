@@ -1,6 +1,9 @@
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
+import ScrollProgress from "./components/ScrollProgress/ScrollProgress";
+import BackToTop from "./components/BackToTop/BackToTop";
+
 import Hero from "./sections/Hero/Hero";
 import Profile from "./sections/Profile/Profile";
 import About from "./sections/About/About";
@@ -11,17 +14,32 @@ import Experience from "./sections/Experience/Experience";
 import Contact from "./sections/Contact/Contact";
 
 import useTheme from "./hooks/useTheme";
+import usePageNavigation from "./hooks/usePageNavigation";
 
 import "./App.css";
 
 function App() {
   const { theme, toggleTheme } = useTheme();
 
+  const { activeSection, progress, showBackToTop } = usePageNavigation();
+
   return (
     <>
-      <Header theme={theme} onToggleTheme={toggleTheme} />
+      <a className="skip-link" href="#main-content">
+        Pular para o conteúdo
+      </a>
 
-      <main className="container">
+      <div className="site-header">
+        <Header
+          theme={theme}
+          onToggleTheme={toggleTheme}
+          activeSection={activeSection}
+        />
+
+        <ScrollProgress progress={progress} />
+      </div>
+
+      <main className="container" id="main-content" tabIndex={-1}>
         <div className="bento-grid">
           <Hero />
           <Profile />
@@ -35,6 +53,8 @@ function App() {
       </main>
 
       <Footer />
+
+      <BackToTop visible={showBackToTop} />
     </>
   );
 }
