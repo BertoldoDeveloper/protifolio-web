@@ -4,7 +4,7 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
-import { navigationLinks } from "../../Data/navigation";
+import { navigationLinks } from "../../data/navigation";
 
 import "./Header.css";
 

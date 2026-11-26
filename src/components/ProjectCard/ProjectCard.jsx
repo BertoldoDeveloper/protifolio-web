@@ -6,7 +6,7 @@ import Card from "../Card/Card";
 import Button from "../Button/Button";
 import TechTag from "../TechTag/TechTag";
 import SafeImage from "../SafeImage/SafeImage";
-import { projectStatusLabels } from "../../Data/projectFilters";
+import { projectStatusLabels } from "../../data/projectFilters";
 
 import "./ProjectCard.css";
 

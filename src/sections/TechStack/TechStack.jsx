@@ -4,7 +4,7 @@ import Card from "../../components/Card/Card";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import TechnologyCard from "../../components/TechnologyCard/TechnologyCard";
 
-import { technologies } from "../../Data/technologies";
+import { technologies } from "../../data/technologies";
 
 import "./TechStack.css";
 
