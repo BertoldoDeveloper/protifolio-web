@@ -55,7 +55,13 @@
   --radius-full: 999px;
 
   /* Layout */
+
   --container-width: 1200px;
+  --container-gutter: 24px;
+
+  /* Bento Grid */
+
+  --grid-columns: 12;
   --grid-gap: 24px;
 
   /* Animacao */
@@ -81,4 +87,30 @@
 
   --color-on-primary: #17171c;
   --color-on-preview: #51419d;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN TOKENS
+======================================== */
+
+@media (max-width: 1024px) {
+  :root {
+    --grid-columns: 8;
+    --grid-gap: 16px;
+    --container-gutter: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --grid-columns: 4;
+    --grid-gap: 16px;
+    --container-gutter: 24px;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --container-gutter: 16px;
+  }
 }

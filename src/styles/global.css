@@ -42,8 +42,8 @@ a {
 }
 
 .container {
-  width: calc(100% - 48px);
-  max-width: var(--container-width);
+  width: calc(100% - var(--container-gutter, 24px) * 2);
+  max-width: var(--container-width, 1200px);
   margin-inline: auto;
 }
 
