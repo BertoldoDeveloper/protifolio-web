@@ -1,4 +1,4 @@
-import { projectFilters } from "../../Data/projectFilters";
+import { projectFilters } from "../../data/projectFilters";
 
 import "./ProjectFilters.css";
 
