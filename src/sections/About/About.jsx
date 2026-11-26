@@ -4,7 +4,7 @@ import Card from "../../components/Card/Card";
 import TechTag from "../../components/TechTag/TechTag";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
 
-import { about } from "../../Data/about";
+import { about } from "../../data/about";
 
 import "./About.css";
 

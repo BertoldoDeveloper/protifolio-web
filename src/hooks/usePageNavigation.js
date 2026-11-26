@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { navigationSectionIds } from "../Data/navigation";
+import { navigationSectionIds } from "../data/navigation";
 
 function usePageNavigation() {
   const [activeSection, setActiveSection] = useState("inicio");
