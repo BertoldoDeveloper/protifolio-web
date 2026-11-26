@@ -13,7 +13,7 @@ export const profile = {
 
   resume: `${import.meta.env.BASE_URL}documents/curriculo.pdf`,
 
-  email: "ladislau.bertoldo1997@gmail.com",
+  email: "bertoldo.developer@gmail.com",
 
   social: {
     github: "https://github.com/BertoldoDeveloper",
