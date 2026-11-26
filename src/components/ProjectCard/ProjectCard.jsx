@@ -6,14 +6,9 @@ import Card from "../Card/Card";
 import Button from "../Button/Button";
 import TechTag from "../TechTag/TechTag";
 import SafeImage from "../SafeImage/SafeImage";
+import { projectStatusLabels } from "../../Data/projectFilters";
 
 import "./ProjectCard.css";
-
-const statusLabels = {
-  planned: "Planejado",
-  "in-progress": "Em desenvolvimento",
-  completed: "Concluído",
-};
 
 function ProjectCard({ project }) {
   const {
@@ -52,7 +47,7 @@ function ProjectCard({ project }) {
       </div>
 
       <span className={`project-card__status project-card__status--${status}`}>
-        {statusLabels[status] || "Não informado"}
+        {projectStatusLabels[status] || "Não informado"}
       </span>
 
       <h3 className="project-card__title">{title}</h3>
