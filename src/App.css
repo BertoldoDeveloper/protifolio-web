@@ -1,4 +1,6 @@
-/* Sticky Header */
+/* ========================================
+   STICKY HEADER
+======================================== */
 
 .site-header {
   position: sticky;
@@ -11,14 +13,107 @@
   border-bottom: 1px solid var(--color-border);
 }
 
-/* Evita que o botão flutuante cubra
-   os controles do rodapé */
+/* ========================================
+   BENTO GRID
+======================================== */
+
+.bento-grid {
+  display: grid;
+
+  grid-template-columns: repeat(var(--grid-columns, 12), minmax(0, 1fr));
+
+  gap: var(--grid-gap, 24px);
+
+  align-items: stretch;
+}
+
+.bento-grid > .card {
+  min-width: 0;
+}
+
+/* ========================================
+   DESKTOP
+======================================== */
+
+.bento-grid > .hero {
+  grid-column: span 8;
+  min-height: 420px;
+}
+
+.bento-grid > .profile {
+  grid-column: span 4;
+}
+
+.bento-grid > .about,
+.bento-grid > .tech-stack {
+  grid-column: span 6;
+  min-height: 312px;
+}
+
+.bento-grid > .projects {
+  grid-column: 1 / -1;
+  min-height: 480px;
+}
+
+.bento-grid > .education,
+.bento-grid > .experience {
+  grid-column: span 6;
+  min-height: 420px;
+}
+
+.bento-grid > .contact {
+  grid-column: 1 / -1;
+  min-height: 192px;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
 
 .footer {
   padding-right: 72px;
 }
 
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1024px) {
+  .bento-grid > .hero {
+    grid-column: span 5;
+  }
+
+  .bento-grid > .profile {
+    grid-column: span 3;
+  }
+
+  .bento-grid > .about,
+  .bento-grid > .tech-stack,
+  .bento-grid > .education,
+  .bento-grid > .experience {
+    grid-column: span 4;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
 @media (max-width: 600px) {
+  .bento-grid > .card {
+    grid-column: 1 / -1;
+    min-height: auto;
+  }
+
+  .bento-grid > .card:not(.profile) {
+    padding: var(--space-4);
+  }
+
+  .bento-grid > .profile.card {
+    padding: 0;
+    min-height: 300px;
+  }
+
   .footer {
     padding-right: 56px;
   }
